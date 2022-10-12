@@ -1,0 +1,27 @@
+.content,
+.vanity-bar,
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+.vanity-bar {
+    border: 3px solid red;
+    width: 30%;
+}
+
+.content {
+    border: 3px solid blue;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 auto;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    background-color: bisque;
+}
