@@ -1,19 +1,38 @@
+/* Colour scheme variables */
+:root {
+    --pale-orange: #fffab7;
+    --pink: #ec3ab0;
+    --light-blue: #46fff1;
+    --black: #000000;
+    --purple: #8b01c6;
+    --dark-blue: #3600b1;
+}
+
+@font-face {
+    font-family: CyberFont;
+    src: url(./fonts/Dirtchunk-0W0AR.otf);
+}
+
 .content,
 .vanity-bar,
 body {
     padding: 0;
     margin: 0;
     height: 100%;
+    max-height: 100%;
 }
 
 .vanity-bar {
     border: 3px solid red;
-    width: 30%;
+    width: 40%;
+    position: relative;
+    display: flex;
+    flex: 0 1 auto;
 }
 
 .content {
     border: 3px solid blue;
-    width: 70%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     flex: 0 1 auto;
@@ -25,3 +44,67 @@ body {
     width: 100%;
     background-color: bisque;
 }
+
+.vanity-band {
+    font-family: CyberFont;
+    color: #FFB845;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    left: 0;
+    top: 10%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#vanity-gif {
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+}
+
+#logo {
+    width: 150px;
+    height: 150px;
+    padding: 15px;
+}
+
+.vanity-band > h1 {
+    padding: 0;
+    margin: 0;
+    padding-left: 60px;
+    font-size: 100px;
+    font-weight: 200;
+    letter-spacing: 10px;
+    /* color: rgba(0, 0, 0, 0.5); */
+    color: #fff;
+    /* text-shadow: 
+        0 0 7px #fff,
+        0 0 10px #fff,
+        0 0 21px #fff,
+        0 0 42px var(--light-blue),
+        0 0 82px var(--light-blue),
+        0 0 92px var(--light-blue),
+        0 0 102px var(--light-blue),
+        0 0 151px var(--light-blue); */
+    animation: flicker 1.5s infinite alternate;
+}
+
+/* taken from css-tricks: https://css-tricks.com/how-to-create-neon-text-with-css/#aa-the-flickering-effect */
+@keyframes flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      text-shadow:
+        0 0 4px #fff,
+        /* 0 0 11px #fff, */
+        /* 0 0 19px #fff, */
+        0 0 40px var(--light-blue),
+        0 0 80px var(--light-blue),
+        0 0 90px var(--light-blue),
+        0 0 100px var(--light-blue);
+        /*0 0 150px var(--light-blue); */
+    }
+    20%, 24%, 55% {       
+      text-shadow: none;
+    }
+  }
