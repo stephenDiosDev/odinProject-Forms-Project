@@ -23,8 +23,8 @@ body {
 }
 
 .vanity-bar {
-    border: 3px solid red;
-    width: 40vw;
+    /* border: 3px solid red; */
+    width: 35vw;
     position: relative;
     display: flex;
     flex: 0 1 auto;
@@ -32,7 +32,7 @@ body {
 
 .content {
     border: 3px solid blue;
-    width: 60vw;
+    width: 65vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -60,10 +60,11 @@ body {
     align-items: center;
 }
 
-#vanity-gif {
+#vanity-video {
     max-width: 100%;
-    min-height: 100vh;
-    max-height: 100vh;
+    min-width: 100%;
+    min-height: 100%;
+    object-fit: fill;
 }
 
 #logo {
@@ -129,17 +130,7 @@ body {
     width: 100%;
     background-color: red;
     font-size: 20px;
-    /* Needs:
-        
-        - proper form flow (flex flow or something similar)
-        - good spacing on the header and button below
-        - good resizing behaviour (need not be perfect!)
-    
-    
-    
-    */
     box-shadow: 5px 5px 3px var(--black);
-    
 }
 
 .form-div {
