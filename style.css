@@ -60,6 +60,24 @@ body {
     align-items: center;
 }
 
+.vanity-link {
+    color: var(--pale-orange);
+    position: absolute;
+    left: 40%;
+    top: 95%;
+    align-content: center;
+}
+
+a:link {
+    /* unvisited link */
+    color: var(--light-blue);
+}
+
+a:visited {
+    /* visited link */
+    color: var(--pale-orange);
+}
+
 #vanity-video {
     max-width: 100%;
     min-width: 100%;
@@ -71,6 +89,7 @@ body {
     width: 150px;
     height: 150px;
     padding: 15px;
+    opacity: 0.75;
 }
 
 .vanity-band > h1 {
