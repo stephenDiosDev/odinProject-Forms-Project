@@ -13,6 +13,10 @@
     src: url(./fonts/Dirtchunk-0W0AR.otf);
 }
 
+body {
+    display: flex;
+}
+
 .content,
 .vanity-bar,
 body {
@@ -24,15 +28,15 @@ body {
 
 .vanity-bar {
     /* border: 3px solid red; */
-    width: 35vw;
+    width: 40vw;
     position: relative;
     display: flex;
-    flex: 0 1 auto;
+    flex: 0 0 auto;
 }
 
 .content {
     border: 3px solid blue;
-    width: 65vw;
+    width: 60vw;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -69,6 +73,10 @@ body {
     align-items: center;
 }
 
+#vanity-title {
+    font-size: 80px;
+}
+
 .vanity-link {
     color: var(--pale-orange);
     position: absolute;
@@ -95,8 +103,8 @@ a:visited {
 }
 
 #logo {
-    width: 150px;
-    height: 150px;
+    width: 120px;
+    height: 120px;
     padding: 15px;
     opacity: 0.75;
 }

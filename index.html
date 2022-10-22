@@ -15,7 +15,7 @@
             <!-- Contains the background gif and the greyed out div with logo and company name -->
             <div class="vanity-band">
                 <img id="logo" src="./images/shapes.png" alt="4 different shapes in a 2x2 formation">
-                <h1>SCAPE</h1>
+                <h1 id="vanity-title">ALT:LIFE</h1>
             </div>
             <div class="vanity-link">
                 <p>GIF created by <a href="https://www.behance.net/gallery/71097767/Corporations">Kenze Wee</a></p>
@@ -59,7 +59,7 @@
                             </div>
                             <div class="input">
                                 <label for="confirm-password">Confirm Password</label>
-                                <input type="password" name="confirm-password" id="confirm-password" required>
+                                <input type="password" name="confirm-password" id="confirm-password" pattern="(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!$&*()\-_]).{8,}$)" required>
                                 <span></span>
                             </div>
                         </div>
@@ -71,18 +71,5 @@
                 </div>
             </div>
         </div>
-        <script>
-            const password = document.getElementById("password");
-            const confirmPassword = document.getElementById("confirm-password");
-
-            confirmPassword.addEventListener("input", (event) => {
-                if(password.textContent === confirmPassword.textContent) {
-                    console.log("Passwords match!");
-                }
-                else {
-                    console.log("Passwords are different!");
-                }
-            });
-        </script>
     </body>
 </html>
