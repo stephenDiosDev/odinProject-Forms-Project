@@ -10,70 +10,59 @@
     </head>
 
     <body>
-        <!-- Need at least the following:
-                - email
-                - password
-                - confirm password
-                - first name
-                - last name
-                - phone number
-                - Create Account button
-                - "Already have an account? Log in" label with hyperlink
-                - <p> above the form with some description
-        
-        -->
         <div class="vanity-bar">
             <video id="vanity-video" autoplay loop muted playsinline src="./images/city.webm" alt="Animated gif of a gritty, neon, futuristic cyperpunk city in a pixel art theme"></video>
             <!-- Contains the background gif and the greyed out div with logo and company name -->
             <div class="vanity-band">
                 <img id="logo" src="./images/shapes.png" alt="4 different shapes in a 2x2 formation">
-                <!-- <img id="logo" src="./images/abstract-vector-colorful-mesh-dark-background-futuristic-style-card_1217-4039.jpeg" alt="4 different shapes in a 2x2 formation"> -->
-                <h1>SBEVEN CITY</h1>
+                <h1>SCAPE</h1>
             </div>
             <div class="vanity-link">
                 <p>GIF created by <a href="https://www.behance.net/gallery/71097767/Corporations">Kenze Wee</a></p>
             </div>
         </div>
         <div class="content">
-            <div class="cnt-header">
-                <h1>Test Header</h1>
+            <div class="cnt-spacing">
+                <div class="cnt-header">
+                    <h1>Test Header</h1>
+                </div>
+                <div class="cnt-form">
+                    <h1>Test form</h1>
+                    <form action="" class="form">
+                        <div class="form-div">
+                            <div class="input">
+                                <label for="email">Email</label>
+                                <input type="email" name="email" id="email" required>
+                            </div>
+                            <div class="input">
+                                <label for="first-name">First Name</label>
+                                <input type="text" name="first-name" id="first-name" required>
+                            </div>
+                            <div class="input">
+                                <label for="last-name">Last Name</label>
+                                <input type="text" name="last-name" id="last-name" required>
+                            </div>
+                            <div class="input">
+                                <label for="phone">Phone Number</label>
+                                <input type="number" name="phone" id="phone">  
+                            </div>
+                            <div class="input">
+                                <label for="password">Password</label>
+                                <input type="password" name="password" id="password" required> 
+                            </div>
+                            <div class="input">
+                                <label for="confirm-password">Confirm Password</label>
+                                <input type="password" name="confirm-password" id="confirm-password" required>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="cnt-button">
+                    <button type="submit">Create</button>
+                    <p>Already have an account? Log in</p>
+                </div>
             </div>
-            <div class="cnt-form">
-                <h1>Test form</h1>
-                <form action="" class="form">
-                    <div class="form-div">
-                        <div class="input">
-                            <label for="email">Email</label>
-                            <input type="email" name="email" id="email" required>
-                        </div>
-                        <div class="input">
-                            <label for="first-name">First Name</label>
-                            <input type="text" name="first-name" id="first-name" required>
-                        </div>
-                        <div class="input">
-                            <label for="last-name">Last Name</label>
-                            <input type="text" name="last-name" id="last-name" required>
-                        </div>
-                        <div class="input">
-                            <label for="phone">Phone Number</label>
-                            <input type="number" name="phone" id="phone">  
-                        </div>
-                        <div class="input">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" id="password" required> 
-                        </div>
-                        <div class="input">
-                            <label for="confirm-password">Confirm Password</label>
-                            <input type="password" name="confirm-password" id="confirm-password" required>
-                        </div>
-                    </div>
-                </form>
-            </div>
-            <div class="cnt-button">
-                <button type="submit">Create</button>
-                <p>Already have an account? Log in</p>
-            </div>
+        
         </div>
     </body>
-
 </html>
