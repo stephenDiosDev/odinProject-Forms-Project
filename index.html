@@ -70,7 +70,19 @@
                     <p>Already have an account? Log in</p>
                 </div>
             </div>
-        
         </div>
+        <script>
+            const password = document.getElementById("password");
+            const confirmPassword = document.getElementById("confirm-password");
+
+            confirmPassword.addEventListener("input", (event) => {
+                if(password.textContent === confirmPassword.textContent) {
+                    console.log("Passwords match!");
+                }
+                else {
+                    console.log("Passwords are different!");
+                }
+            });
+        </script>
     </body>
 </html>
