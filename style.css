@@ -104,6 +104,10 @@ a:visited {
     color: var(--pale-orange);
 }
 
+a:hover {
+    color: var(--light-blue);
+}
+
 #vanity-video {
     max-width: 100%;
     min-width: 100%;
@@ -217,6 +221,11 @@ button {
     /* animation: flicker 1.5s infinite alternate; */
 }
 
+button:hover {
+    border: 2px solid var(--light-blue);
+    color: var(--light-blue);
+}
+
 input + span::after {
     font-size: 0.7rem;
     position: absolute;
@@ -286,13 +295,3 @@ input:valid:not(:placeholder-shown) + span::before {
     font-size: 30px;
     /* animation: flicker 1.5s infinite alternate; */
 }
-
-/* input:focus:invalid {
-    outline: none;
-    border: 4px solid var(--pink);
-}
-
-input:focus:valid {
-    outline: none;
-    border: 4px solid var(--green);
-} */
