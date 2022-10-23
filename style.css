@@ -1,20 +1,33 @@
 /* Colour scheme variables */
 :root {
     --pale-orange: #fffab7;
+    /* --orange: #F9D7B3; */
+    /* --orange: #FFCE99; */
+    --orange: #FFB566;
     --pink: #ec3ab0;
     --light-blue: #46fff1;
     --black: #000000;
     --purple: #8b01c6;
     --dark-blue: #3600b1;
+    /* --green: #7BFFC6; */
+    /* --green: #47FF72; */
+    --green: #7AFF99;
 }
 
 @font-face {
-    font-family: CyberFont;
-    src: url(./fonts/Dirtchunk-0W0AR.otf);
+    font-family: DigitalFont;
+    src: url(./fonts/aadhunik-webfont.woff);
+}
+
+* {
+    font-family: DigitalFont;
 }
 
 body {
     display: flex;
+    background-color: var(--black);
+    flex-direction: row;
+    width: 100%;
 }
 
 .content,
@@ -24,6 +37,8 @@ body {
     margin: 0;
     height: 100vh;
     max-height: 100vh;
+    color: white;
+    font-family: DigitalFont;
 }
 
 .vanity-bar {
@@ -35,7 +50,6 @@ body {
 }
 
 .content {
-    border: 3px solid blue;
     width: 60vw;
     display: flex;
     flex-direction: column;
@@ -45,7 +59,6 @@ body {
 }
 
 .cnt-spacing {
-    border: 3px solid rgb(0, 255, 47);
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -53,24 +66,19 @@ body {
     height: 60%;
 }
 
-body {
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    background-color: bisque;
-}
-
 .vanity-band {
-    font-family: CyberFont;
-    color: #FFB845;
+    /* font-family: CyberFont; */
+    font-family: DigitalFont;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
     left: 0;
     top: 10%;
     width: 100%;
+    height: 12%;
     display: flex;
     justify-content: center;
     align-items: center;
+    
 }
 
 #vanity-title {
@@ -103,30 +111,22 @@ a:visited {
 }
 
 #logo {
-    width: 120px;
-    height: 120px;
-    padding: 15px;
-    opacity: 0.75;
+    margin-top: 0;
+    margin-bottom: 0;
+    /* padding-bottom: 20px; */
+    font-size: 150px;
+    animation: flicker 1.0s infinite alternate;
+    position: relative;
+    top: -12%;
 }
 
-.vanity-band > h1 {
+#vanity-title {
     padding: 0;
     margin: 0;
     padding-left: 60px;
-    font-size: 100px;
+    font-size: 80px;
     font-weight: 200;
-    letter-spacing: 10px;
-    /* color: rgba(0, 0, 0, 0.5); */
-    color: #fff;
-    /* text-shadow: 
-        0 0 7px #fff,
-        0 0 10px #fff,
-        0 0 21px #fff,
-        0 0 42px var(--light-blue),
-        0 0 82px var(--light-blue),
-        0 0 92px var(--light-blue),
-        0 0 102px var(--light-blue),
-        0 0 151px var(--light-blue); */
+    letter-spacing: 10px; 
     animation: flicker 1.5s infinite alternate;
 }
 
@@ -135,16 +135,28 @@ a:visited {
     0%, 18%, 22%, 25%, 53%, 57%, 100% {
       text-shadow:
         0 0 4px #fff,
-        /* 0 0 11px #fff, */
-        /* 0 0 19px #fff, */
         0 0 40px var(--light-blue),
         0 0 80px var(--light-blue),
         0 0 90px var(--light-blue),
         0 0 100px var(--light-blue);
-        /*0 0 150px var(--light-blue); */
     }
     20%, 24%, 55% {       
       text-shadow: none;
+    }
+  }
+
+  /* taken from css-tricks: https://css-tricks.com/how-to-create-neon-text-with-css/#aa-the-flickering-effect */
+@keyframes box-flicker {
+    0%, 18%, 22%, 25%, 53%, 57%, 100% {
+      box-shadow:
+        0 0 4px #fff,
+        0 0 40px var(--light-blue),
+        0 0 80px var(--light-blue),
+        0 0 90px var(--light-blue),
+        0 0 100px var(--light-blue);
+    }
+    20%, 24%, 55% {       
+      box-shadow: none;
     }
   }
 
@@ -158,14 +170,12 @@ a:visited {
 .input {
     width: 40%;
     display: flex;
-    /* flex-direction: column; */
     flex-flow: column wrap;
     padding: 20px;
 }
 
 .form {
     width: 100%;
-    background-color: red;
     font-size: 20px;
     box-shadow: 5px 5px 3px var(--black);
 }
@@ -177,20 +187,47 @@ a:visited {
     padding: 15px;
 }
 
+/*vvv Remove arrows from phone number input field vvv*/
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}
+/*^^^ Remove arrows from phone number input field ^^^*/
+
 input + span {
     position: relative;
+}
+
+button {
+    background-color: var(--black);
+    color: var(--pink);
+    width: 120px;
+    height: 50px;
+    font-size: 22px;
+    cursor: pointer;
+    border: 2px solid var(--pink);
+    /* animation: flicker 1.5s infinite alternate; */
 }
 
 input + span::after {
     font-size: 0.7rem;
     position: absolute;
     padding: 5px 10px;
-    top: -47px;
+    top: -65px;
 }
 
 input:required + span::after {
     color: var(--pale-orange);
-    background-color: var(--pink);
+    background-color: var(--black);
+    border: 2px solid var(--pink);
+    border-radius: 5px;
     content: "Required";
     right: 10px;
 }
@@ -198,21 +235,47 @@ input:required + span::after {
 input + span::before {
     position: absolute;
     right: -30px;
-    top: -33px;
+    top: -55px;
 }
 
-input:invalid {
-    border: 7px solid var(--light-blue);
+input:invalid:not(:placeholder-shown) {
+    border: 4px solid var(--orange);
 }
 
-input:invalid + span::before {
-    content: "☢";
-    color: black;
-    font-size: 35px;
+input:valid:not(:placeholder-shown) {
+    border: 4px solid var(--green);
 }
 
-input:valid + span::before {
-    content: "♥";
+input {
+    height: 40px;
+    border-radius: 5px;
+    border: 4px solid var(--pink);
+    background-color: var(--black);
+    color: white;
+    /* animation: box-flicker 1.5s infinite alternate; */
+}
+
+input:invalid:not(:placeholder-shown) + span::before {
+    content: "⨂";
+    color: var(--orange);
+    font-size: 30px;
+    /* animation: flicker 1.5s infinite alternate; */
+    
+}
+
+input:valid:not(:placeholder-shown) + span::before {
+    content: "⨁";
     color: greenyellow;
-    font-size: 35px;
+    font-size: 30px;
+    /* animation: flicker 1.5s infinite alternate; */
+}
+
+input:focus:invalid {
+    outline: none;
+    border: 4px solid var(--pink);
+}
+
+input:focus:valid {
+    outline: none;
+    border: 4px solid var(--green);
 }
