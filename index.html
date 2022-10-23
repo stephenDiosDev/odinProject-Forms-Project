@@ -1,51 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
 
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <title>Odin Project Form Project</title>
-    </head>
-
-    <body>
-        <div class="vanity-bar">
-            <video id="vanity-video" autoplay loop muted playsinline src="./images/city.webm" alt="Animated gif of a gritty, neon, futuristic cyperpunk city in a pixel art theme"></video>
-            <!-- Contains the background gif and the greyed out div with logo and company name -->
-            <div class="vanity-band">
-                <h1 id="logo">⬡</h1>
-                <h1 id="vanity-title">ALT:LIFE</h1>
-            </div>
-            <div class="vanity-link">
-                <p>GIF created by <a href="https://www.behance.net/gallery/71097767/Corporations">Kenze Wee</a></p>
-            </div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Odin Project Form Project</title>
+</head>
+<body>
+    <div class="vanity-bar">
+        <video id="vanity-video" autoplay loop muted playsinline src="./images/city.webm"
+            alt="Animated gif of a gritty, neon, futuristic cyperpunk city in a pixel art theme"></video>
+        <!-- Contains the background gif and the greyed out div with logo and company name -->
+        <div class="vanity-band">
+            <h1 id="logo">⬡</h1>
+            <h1 id="vanity-title">ALT:LIFE</h1>
         </div>
-        <div class="content">
-            <div class="cnt-spacing">
-                <div class="cnt-header">
-                    <!-- <h1>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. 
-                        Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure 
-                        dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non 
-                        proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h1> -->
-                        <h1>
-                            This is not a real online service! Your alt is calling for you, waiting in a city of dreams. Who would you be
-                            in a city where no limits exist. Maybe it's time to find out...
-                        </h1>
-                </div>
-                <div class="cnt-form">
-                    <h1>Make your alt</h1>
-                    <form action="" class="form">
+        <div class="vanity-link">
+            <p>GIF created by <a href="https://www.behance.net/gallery/71097767/Corporations">Kenze Wee</a></p>
+        </div>
+    </div>
+    <div class="content">
+        <div class="cnt-spacing">
+            <div class="cnt-header">
+                <h1>
+                    This is not a real online service! Your alt is calling for you, waiting in a city of dreams. Who
+                    would you be
+                    in a city where no limits exist. Maybe it's time to find out...
+                </h1>
+            </div>
+            <div class="cnt-form">
+                <fieldset>
+                    <legend>Make your alt</legend>
+                    <form class="form" method="post">
                         <div class="form-div">
                             <div class="input">
                                 <label for="email">Email *</label>
-                                <input type="email" name="email" id="email" placeholder="cyber@scape.com" required>
+                                <input type="email" name="email" id="email" placeholder="alt@life.com" required>
                                 <span></span>
                             </div>
                             <div class="input">
                                 <label for="phone">Phone Number</label>
                                 <!-- matches phone numbers with +countryCode optional and dashes optional-->
-                                <input type="number" name="phone" id="phone" placeholder="xxx-xxx-xxxx" pattern="( ^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$ )">  
+                                <input type="number" name="phone" id="phone" placeholder="xxx-xxx-xxxx"
+                                    pattern="( ^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$ )">
                                 <span></span>
                             </div>
                             <div class="input">
@@ -61,22 +60,27 @@
                             <div class="input">
                                 <label for="password">Password *</label>
                                 <!-- min len 8, >=1 uppercase, >=1 lowercase, >=1 number, >=1 of the symbols -->
-                                <input type="password" name="password" id="password" placeholder="Min 8 characters, at least one uppercase, lowercase, number, and symbol" pattern="(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!$&*()\-_]).{8,}$)" required>
-                                <span></span> 
+                                <input type="password" name="password" id="password"
+                                    placeholder="Min 8 characters, at least one uppercase, lowercase, number, and symbol"
+                                    pattern="(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!$&*()\-_]).{8,}$)"
+                                    required>
+                                <span></span>
                             </div>
                             <div class="input">
                                 <label for="confirm-password">Confirm Password *</label>
-                                <input type="password" name="confirm-password" id="confirm-password" placeholder=" " pattern="(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!$&*()\-_]).{8,}$)" required>
+                                <input type="password" name="confirm-password" id="confirm-password" placeholder=" "
+                                    pattern="(^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[a-zA-Z])(?=.*[!$&*()\-_]).{8,}$)"
+                                    required>
                                 <span></span>
                             </div>
                         </div>
+                        <input type="submit" value="Create">
+                        <p>Already have an alt? <a href="" unvisited>Chip in</a></p>
                     </form>
-                </div>
-                <div class="cnt-button">
-                    <button type="submit">Create</button>
-                    <p>Already have an alt? <a href="" unvisited>Chip in</a></p>
-                </div>
+                </fieldset>
             </div>
         </div>
-    </body>
+    </div>
+</body>
+
 </html>

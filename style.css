@@ -1,16 +1,12 @@
 /* Colour scheme variables */
 :root {
     --pale-orange: #fffab7;
-    /* --orange: #F9D7B3; */
-    /* --orange: #FFCE99; */
     --orange: #FFB566;
     --pink: #ec3ab0;
     --light-blue: #46fff1;
     --black: #000000;
     --purple: #8b01c6;
     --dark-blue: #3600b1;
-    /* --green: #7BFFC6; */
-    /* --green: #47FF72; */
     --green: #7AFF99;
 }
 
@@ -68,7 +64,6 @@ body {
 }
 
 .vanity-band {
-    /* font-family: CyberFont; */
     font-family: DigitalFont;
     background-color: rgba(0, 0, 0, 0.5);
     position: absolute;
@@ -79,7 +74,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+
 }
 
 #vanity-title {
@@ -118,7 +113,6 @@ a:hover {
 #logo {
     margin-top: 0;
     margin-bottom: 0;
-    /* padding-bottom: 20px; */
     font-size: 150px;
     animation: flicker 1.0s infinite alternate;
     position: relative;
@@ -131,39 +125,59 @@ a:hover {
     padding-left: 60px;
     font-size: 80px;
     font-weight: 200;
-    letter-spacing: 10px; 
+    letter-spacing: 10px;
     animation: flicker 1.5s infinite alternate;
 }
 
 /* taken from css-tricks: https://css-tricks.com/how-to-create-neon-text-with-css/#aa-the-flickering-effect */
 @keyframes flicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-      text-shadow:
-        0 0 4px #fff,
-        0 0 40px var(--light-blue),
-        0 0 80px var(--light-blue),
-        0 0 90px var(--light-blue),
-        0 0 100px var(--light-blue);
-    }
-    20%, 24%, 55% {       
-      text-shadow: none;
-    }
-  }
 
-  /* taken from css-tricks: https://css-tricks.com/how-to-create-neon-text-with-css/#aa-the-flickering-effect */
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow:
+            0 0 4px #fff,
+            0 0 40px var(--light-blue),
+            0 0 80px var(--light-blue),
+            0 0 90px var(--light-blue),
+            0 0 100px var(--light-blue);
+    }
+
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+/* taken from css-tricks: https://css-tricks.com/how-to-create-neon-text-with-css/#aa-the-flickering-effect */
 @keyframes box-flicker {
-    0%, 18%, 22%, 25%, 53%, 57%, 100% {
-      box-shadow:
-        0 0 4px #fff,
-        0 0 40px var(--light-blue),
-        0 0 80px var(--light-blue),
-        0 0 90px var(--light-blue),
-        0 0 100px var(--light-blue);
+
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        box-shadow:
+            0 0 4px #fff,
+            0 0 40px var(--light-blue),
+            0 0 80px var(--light-blue),
+            0 0 90px var(--light-blue),
+            0 0 100px var(--light-blue);
     }
-    20%, 24%, 55% {       
-      box-shadow: none;
+
+    20%,
+    24%,
+    55% {
+        box-shadow: none;
     }
-  }
+}
 
 .cnt-form {
     width: 100%;
@@ -196,21 +210,22 @@ a:hover {
 /* Chrome, Safari, Edge, Opera */
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
-  -webkit-appearance: none;
-  margin: 0;
+    -webkit-appearance: none;
+    margin: 0;
 }
 
 /* Firefox */
 input[type=number] {
-  -moz-appearance: textfield;
+    -moz-appearance: textfield;
 }
+
 /*^^^ Remove arrows from phone number input field ^^^*/
 
-input + span {
+input+span {
     position: relative;
 }
 
-button {
+input[type="submit"] {
     background-color: var(--black);
     color: var(--pink);
     width: 120px;
@@ -218,22 +233,21 @@ button {
     font-size: 22px;
     cursor: pointer;
     border: 2px solid var(--pink);
-    /* animation: flicker 1.5s infinite alternate; */
 }
 
-button:hover {
+input[type="submit"]:hover {
     border: 2px solid var(--light-blue);
     color: var(--light-blue);
 }
 
-input + span::after {
+input+span::after {
     font-size: 0.7rem;
     position: absolute;
     padding: 5px 10px;
     top: -65px;
 }
 
-input:required + span::after {
+input:required+span::after {
     color: var(--pale-orange);
     background-color: var(--black);
     border: 2px solid var(--pink);
@@ -242,31 +256,25 @@ input:required + span::after {
     right: 10px;
 }
 
-input:required:valid + span::after {
+input:required:valid+span::after {
     border: 2px solid var(--green);
 }
 
-input:required:invalid:not(:placeholder-shown) + span::after {
+input:required:invalid:not(:placeholder-shown)+span::after {
     border: 2px solid var(--orange);
 }
 
-input + span::before {
+input+span::before {
     position: absolute;
     right: -30px;
     top: -55px;
 }
 
-/* TODO 
-
-    - add some kind of styling to the submit button so it changes colour when we hover/click
-        - same with links
-*/
-
 input:invalid:not(:placeholder-shown) {
     border: 4px solid var(--orange);
 }
 
-input:valid:not(:placeholder-shown) {
+input:valid:not(:placeholder-shown):not(input[type="submit"]) {
     border: 4px solid var(--green);
 }
 
@@ -276,22 +284,27 @@ input {
     border: 4px solid var(--pink);
     background-color: var(--black);
     color: white;
-    /* animation: box-flicker 1.5s infinite alternate; */
     outline: none;
 }
 
 
-input:invalid:not(:placeholder-shown) + span::before {
+input:invalid:not(:placeholder-shown)+span::before {
     content: "⨂";
     color: var(--orange);
     font-size: 30px;
-    /* animation: flicker 1.5s infinite alternate; */
-    
 }
 
-input:valid:not(:placeholder-shown) + span::before {
+input:valid:not(:placeholder-shown)+span::before {
     content: "⨁";
     color: greenyellow;
     font-size: 30px;
-    /* animation: flicker 1.5s infinite alternate; */
+}
+
+fieldset {
+    outline: none;
+    border: none;
+}
+
+legend {
+    font-size: 35px;
 }
